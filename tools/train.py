@@ -85,7 +85,7 @@ with tqdm(range(config['epochs'])) as pbar:
         if epoch >= config['freeze_until_epoch']:
             model.encoder.unfreeze_encoder()
 
-        model = train_epoch(model,train_loader, optimizer, epoch)
+        model = train_epoch(model, train_loader, optimizer, epoch)
 
         ## validation
         ## let's evaluate model on validation dataset
